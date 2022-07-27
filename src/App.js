@@ -2,6 +2,7 @@ import "./assets/css/App.css";
 import As from "./componentes/Asa";
 import Navbar from "./componentes/Navbar";
 import Cocomp from "./componentes/Cocom";
+import Crators from "./componentes/Creators";
 import Int from "./componentes/Intro";
 import Slider from "./componentes/Slider/Slider";
 
@@ -22,6 +23,8 @@ function App() {
               <As />
               <br></br>
               <Cocomp />
+              <br></br>
+              <Crators />
             </div>
           </div>
         </div>
