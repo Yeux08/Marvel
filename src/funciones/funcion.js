@@ -60,4 +60,4 @@ const cratorsFunLen = async (state) => {
     };
   
 
-export { personajesFun, comicsFun, personajesFunlen, comicsFunLen, cratorsFun, cratorsFunLen };
+export { personajesFun, comicsFun, personajesFunlen, comicsFunLen, cratorsFun, cratorsFunLen, eventosFun, eventosFunLen };
