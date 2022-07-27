@@ -4,6 +4,7 @@ import Navbar from "./componentes/Navbar";
 import Cocomp from "./componentes/Cocom";
 import Crators from "./componentes/Creators";
 import Events from "./componentes/Events";
+import Stories from "./componentes/Stories";
 import Int from "./componentes/Intro";
 import Slider from "./componentes/Slider/Slider";
 
@@ -28,6 +29,8 @@ function App() {
               <Crators />
               <br></br>
               <Events/>
+              <br></br>
+              <Stories/>
             </div>
           </div>
         </div>

@@ -58,6 +58,20 @@ const eventosFunLen = async (state) => {
   state(eventosLenUrl.data.data.results.length);
 };
 
+const storiesFun = async (state) => {
+  const storiesUrl = await axios.get(
+    "https://gateway.marvel.com:443/v1/public/stories?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
+  );
+  state(storiesUrl.data.data.results);
+};
+
+const storiesFunLen = async (state) => {
+  const storiesLenUrl = await axios.get(
+    "https://gateway.marvel.com:443/v1/public/stories?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
+  );
+  state(storiesLenUrl.data.data.results.length);
+};
+
 export {
   personajesFun,
   comicsFun,
@@ -67,4 +81,6 @@ export {
   cratorsFunLen,
   eventosFun,
   eventosFunLen,
+  storiesFun,
+  storiesFunLen
 };
