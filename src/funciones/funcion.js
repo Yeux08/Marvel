@@ -38,26 +38,33 @@ const cratorsFun = async (state) => {
 };
 
 const cratorsFunLen = async (state) => {
-    const cratorsLenUrl = await axios.get(
-      "https://gateway.marvel.com:443/v1/public/creators?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
-    );
-    state(cratorsLenUrl.data.data.results.length);
-  };
+  const cratorsLenUrl = await axios.get(
+    "https://gateway.marvel.com:443/v1/public/creators?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
+  );
+  state(cratorsLenUrl.data.data.results.length);
+};
 
+const eventosFun = async (state) => {
+  const eventosUrl = await axios.get(
+    "https://gateway.marvel.com:443/v1/public/events?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
+  );
+  state(eventosUrl.data.data.results);
+};
 
-  const eventosFun = async (state) => {
-    const eventosUrl = await axios.get(
-      "https://gateway.marvel.com:443/v1/public/creators?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
-    );
-    state(eventosUrl.data.data.results);
-  };
-  
-  const eventosFunLen = async (state) => {
-      const eventosLenUrl = await axios.get(
-        "https://gateway.marvel.com:443/v1/public/creators?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
-      );
-      state(eventosLenUrl.data.data.results.length);
-    };
-  
+const eventosFunLen = async (state) => {
+  const eventosLenUrl = await axios.get(
+    "https://gateway.marvel.com:443/v1/public/events?ts=1&apikey=91dbe2a12d78c82041cd263e49619acc&hash=fe0901aaf4845cd58b6cd8ae01d073e4"
+  );
+  state(eventosLenUrl.data.data.results.length);
+};
 
-export { personajesFun, comicsFun, personajesFunlen, comicsFunLen, cratorsFun, cratorsFunLen, eventosFun, eventosFunLen };
+export {
+  personajesFun,
+  comicsFun,
+  personajesFunlen,
+  comicsFunLen,
+  cratorsFun,
+  cratorsFunLen,
+  eventosFun,
+  eventosFunLen,
+};

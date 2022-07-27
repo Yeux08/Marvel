@@ -3,6 +3,7 @@ import As from "./componentes/Asa";
 import Navbar from "./componentes/Navbar";
 import Cocomp from "./componentes/Cocom";
 import Crators from "./componentes/Creators";
+import Events from "./componentes/Events";
 import Int from "./componentes/Intro";
 import Slider from "./componentes/Slider/Slider";
 
@@ -25,6 +26,8 @@ function App() {
               <Cocomp />
               <br></br>
               <Crators />
+              <br></br>
+              <Events/>
             </div>
           </div>
         </div>
